@@ -1,10 +1,12 @@
 import React from "react"
+import MainHeading from "./components/MainHeading.styled"
+import MainContainer from "./components/MainContainer.styled"
 
 function App() {
   return (
-    <>
-      <h1>Hello</h1>
-    </>
+    <MainContainer>
+      <MainHeading>TODO</MainHeading>
+    </MainContainer>
   )
 }
 
