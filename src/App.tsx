@@ -23,7 +23,7 @@ function App() {
         <ThemeSwitcher />
       </MainHeader>
       <section>
-        <AddTaskInput />
+        <AddTaskInput handleAddTask={handleAddTask} />
       </section>
       <TasksContainer itemsLeft={itemLeft}>
         {tasks.map(task => (
@@ -31,7 +31,6 @@ function App() {
             key={task.id}
             isCompleted={task.isCompleted}
             task={task.task}
-            handleAddTask={handleAddTask}
           />
         ))}
       </TasksContainer>

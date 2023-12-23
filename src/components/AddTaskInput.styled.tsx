@@ -1,6 +1,12 @@
 import React from "react"
+import {nanoid} from "nanoid"
 import styled from "styled-components"
 import CheckInput from "./CheckInput.styled"
+import type {Task} from "./Task"
+
+interface AddTaskInput {
+  handleAddTask: (task: Task) => void
+}
 
 const Input = styled.input`
   height: 5rem;
@@ -36,10 +42,22 @@ const CheckInputStyled = styled(CheckInput)`
   left: 2rem;
 `
 
-export default function AddTaskInput() {
+export default function AddTaskInput({handleAddTask}: AddTaskInput) {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    handleAddTask({
+      id: nanoid(),
+      isCompleted: false,
+      task: e.target.value,
+    })
+  }
+
   return (
     <CheckInputContainer>
-      <Input type="text" placeholder="Create a new todo..." />
+      <Input
+        type="text"
+        placeholder="Create a new todo..."
+        onChange={handleChange}
+      />
       <CheckInputStyled />
     </CheckInputContainer>
   )

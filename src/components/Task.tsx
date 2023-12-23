@@ -12,7 +12,6 @@ export interface Task {
   id?: string
   isCompleted: boolean
   task: string
-  handleAddTask?: (task: Task) => void
 }
 
 interface TaskText {
