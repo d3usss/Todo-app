@@ -6,8 +6,13 @@ const MainHeading = styled.h1`
   text-transform: uppercase;
   font-style: normal;
   font-weight: 700;
+  font-size: 2.5rem;
   line-height: normal;
   margin: 5rem 0;
+
+  @media (min-width: 768px) {
+    font-size: 4rem;
+  }
 `
 
 export default MainHeading

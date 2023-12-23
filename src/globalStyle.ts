@@ -10,25 +10,25 @@ import JoesefinSansRegular2 from "./fonts/JosefinSans-Regular.woff2"
 import JoesefinSansRegular from "./fonts/JosefinSans-Regular.woff"
 
 const GlobalStyle = createGlobalStyle`
-${normalize}
+    ${normalize}
 
-@font-face {
-    font-family: 'Josefin Sans';
-    src: url(${JoesefinSansBold2}) format('woff2'),
-        url(${JoesefinSansBold}) format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
+    @font-face {
+        font-family: 'Josefin Sans';
+        src: url(${JoesefinSansBold2}) format('woff2'),
+            url(${JoesefinSansBold}) format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
 
-@font-face {
-    font-family: 'Josefin Sans';
-    src: url(${JoesefinSansRegular2}) format('woff2'),
-        url(${JoesefinSansRegular}) format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+    @font-face {
+        font-family: 'Josefin Sans';
+        src: url(${JoesefinSansRegular2}) format('woff2'),
+            url(${JoesefinSansRegular}) format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
 
     html {
         --heading-color: #FFF;
@@ -43,15 +43,6 @@ ${normalize}
         --bg-color: #FAFAFA;
 
         background-color: var(--bg-color);
-        background-repeat: no-repeat;
-
-        @media(max-width: 768px) { 
-            background-image: url(${bgMobileLight});
-        }
-
-        @media(min-width: 768px) { 
-            background-image: url(${bgDesktopLight});
-        }
     }
 
     body.dark {
@@ -61,7 +52,27 @@ ${normalize}
         --bg-color: #000;
 
         background-color: var(--bg-color);
+    }
 
+    #root {
+        width: 375px;
+        margin: 0 auto;
+        overflow: hidden;
+
+        background-color: var(--bg-color);
+        background-repeat: no-repeat;
+        
+        @media(max-width: 768px) { 
+            background-image: url(${bgMobileLight});
+        }
+
+        @media(min-width: 768px) { 
+            background-image: url(${bgDesktopLight});
+            width: 1440px;
+        }
+    }
+
+    #root.dark {
         @media(max-width: 768px) { 
             background-image: url(${bgMobileDark});
         }
