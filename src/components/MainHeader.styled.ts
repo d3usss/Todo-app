@@ -6,7 +6,7 @@ const MainHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 4rem;
-  margin: 45px 0;
+  margin: 45px 0 30px 0;
 `
 
 export default MainHeader

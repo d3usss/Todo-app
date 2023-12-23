@@ -6,10 +6,13 @@ import {ReactComponent as Checked} from "../images/icon-check.svg"
 import {ReactComponent as Remove} from "../images/icon-cross.svg"
 
 export interface Task {
+  /**
+   * TODO: Check that interface is the same for prop as for data type
+   */
   id?: string
   isCompleted: boolean
   task: string
-  handleAddTask: (task: Task) => void
+  handleAddTask?: (task: Task) => void
 }
 
 interface TaskText {

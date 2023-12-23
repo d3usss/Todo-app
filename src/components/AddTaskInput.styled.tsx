@@ -30,11 +30,17 @@ const CheckInputContainer = styled.div`
   position: relative;
 `
 
+const CheckInputStyled = styled(CheckInput)`
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+`
+
 export default function AddTaskInput() {
   return (
     <CheckInputContainer>
       <Input type="text" placeholder="Create a new todo..." />
-      <CheckInput />
+      <CheckInputStyled />
     </CheckInputContainer>
   )
 }
