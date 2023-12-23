@@ -30,6 +30,10 @@ const GlobalStyle = createGlobalStyle`
         font-display: swap;
     }
 
+    * {
+        box-sizing: border-box;
+    }
+
     html {
         --heading-color: #FFF;
         --link-color-active: #3A7CFD;
@@ -40,16 +44,23 @@ const GlobalStyle = createGlobalStyle`
     body {
         --text-color-main: #494C6B;
         --text-color-completed: #D1D2DA;
+        --text-color-footer: #9495A5;
         --bg-color: #FAFAFA;
+        --task-color: #FFF;
+        --border-color: #E3E4F1;
 
         background-color: var(--bg-color);
+        font-size: 1.2rem;
     }
 
     body.dark {
         --main-color: #393A4B;
         --text-color-main: #C8CBE7;
         --text-color-completed: #4D5067;
+        --text-color-footer: #5B5E7E;
         --bg-color: #000;
+        --task-color: #25273D;
+        --border-color: #393A4B;
 
         background-color: var(--bg-color);
     }

@@ -7,8 +7,8 @@ const MainHeading = styled.h1`
   font-style: normal;
   font-weight: 700;
   font-size: 2.5rem;
-  line-height: normal;
-  margin: 5rem 0;
+  line-height: 2.5rem;
+  margin: 0;
 
   @media (min-width: 768px) {
     font-size: 4rem;
